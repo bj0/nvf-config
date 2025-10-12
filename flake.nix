@@ -14,6 +14,7 @@
         # 1. Add foo to inputs
         # 2. Add foo as a parameter to the outputs function
         # 3. Add here: foo.flakeModule
+        inputs.flake-parts.flakeModules.easyOverlay
       ];
       systems = [
         "x86_64-linux"
@@ -32,7 +33,7 @@
         buildPkg = big:
           (inputs.nvf.lib.neovimConfiguration {
             inherit pkgs;
-            modules = [(import ../configuration.nix big)];
+            modules = [(import ./config.nix big)];
           }).neovim;
       in {
         # Per-system attributes can be defined here. The self' and inputs'
@@ -43,6 +44,7 @@
           nvfvim = buildPkg false;
           nvfvim-big = buildPkg true;
         };
+
         overlayAttrs = {
           inherit (config.packages) nvfvim nvfvim-big;
         };
