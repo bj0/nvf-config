@@ -33,7 +33,10 @@
         buildPkg = big:
           (inputs.nvf.lib.neovimConfiguration {
             inherit pkgs;
-            modules = [(import ./config.nix big)];
+            modules = [
+              (import ./config.nix big)
+              ./options.nix
+            ];
           }).neovim;
       in {
         # Per-system attributes can be defined here. The self' and inputs'

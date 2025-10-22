@@ -13,6 +13,12 @@ big: {
     #   programmingWordlist.enable = big;
     # };
     #
+
+    clipboard = {
+      enable = true;
+      registers = "unnamedplus";
+    };
+
     keymaps = [
       {
         key = "<leader>fk";
@@ -117,6 +123,7 @@ big: {
       kotlin.enable = big;
       java.enable = big;
       tailwind.enable = big;
+      html.enable = big;
     };
 
     visuals = {
@@ -154,6 +161,7 @@ big: {
     };
 
     treesitter.context.enable = true;
+    treesitter.indent.enable = false;
 
     binds = {
       whichKey.enable = true;
