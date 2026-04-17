@@ -122,7 +122,7 @@ big: {
       css.enable = big;
       kotlin.enable = big;
       java.enable = big;
-      tailwind.enable = big;
+      tailwind.enable = false;
       html.enable = big;
     };
 
@@ -206,7 +206,8 @@ big: {
       multicursors.enable = true;
       # smart-splits.enable = isMaximal;
       undotree.enable = true;
-      nvim-biscuits.enable = true;
+      # TODO this is breaking currently
+      # nvim-biscuits.enable = true;
 
       motion = {
         hop.enable = true;
