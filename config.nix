@@ -179,7 +179,8 @@ big: {
 
     minimap = {
       minimap-vim.enable = false;
-      codewindow.enable = big; # lighter, faster, and uses lua for configuration
+      # todo currently broken
+      # codewindow.enable = big; # lighter, faster, and uses lua for configuration
     };
 
     dashboard = {
