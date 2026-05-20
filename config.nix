@@ -75,6 +75,13 @@ big: {
       #   mode = "n";
       #   desc = "Explorer";
       # }
+      {
+        # bufremove
+        key = "<leader>bd";
+        mode = "n";
+        desc = "Remove buffer";
+        action = "<cmd>lua require('mini.bufremove').delete(0, false)<cr>";
+      }
     ];
 
     theme = {
@@ -116,6 +123,7 @@ big: {
 
       bash.enable = big;
       ts.enable = big;
+      json.enable = big;
       python.enable = big;
       go.enable = big;
       lua.enable = big;
@@ -149,11 +157,14 @@ big: {
 
     snippets.luasnip.enable = true;
 
+    # this enables removing buffer without closing window (to prevent neo-tree becoming fullscreen when closing a buffer)
+    mini.bufremove.enable = true;
+
     filetree = {
       # more features
       neo-tree.enable = true;
       # more lightweight, faster
-      # nvim-tree.enable = true
+      # nvim-tree.enable = true;
     };
 
     tabline = {
