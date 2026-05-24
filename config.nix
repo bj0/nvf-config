@@ -222,8 +222,11 @@ big: {
       # nvim-biscuits.enable = true;
 
       motion = {
-        hop.enable = true;
-        leap.enable = true;
+        # hop.enable = true;
+        flash-nvim.enable = true;
+        # for some reason <leader>ss is not working for me
+        # leap.enable = true;
+
         precognition.enable = big;
       };
       images = {
